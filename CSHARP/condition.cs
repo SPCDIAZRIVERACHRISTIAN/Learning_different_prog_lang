@@ -6,15 +6,20 @@ namespace MyApplication
     {
         static void Main(string[] args)
         {
-            int time = 20;
-            time = 10;
-            if (time < 18)
+            Console.Write("What time is it? ");
+            int time = Convert.ToInt32(Console.ReadLine());
+            // time = 10;
+            if (time < 10)
+            {
+                Console.WriteLine("Good Morning VIEEEETNAAAAAAAM!");
+            }
+            else if (time < 20)
             {
                 Console.WriteLine("Good Day!");
             }
             else
             {
-                Console.WriteLine("Good evning!");
+                Console.WriteLine("Good evening!");
             }
         }
     }

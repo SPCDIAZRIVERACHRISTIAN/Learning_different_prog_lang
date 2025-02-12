@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="currency.js"></script>
+</head>
+<body ng-app="app" ng-controller="MainController as main">
+    <h2>Contact List</h2>
+    <hr />
+    <div ng-repeat="item in main.items">
+        <table>
+        <tr>
+            <td>{{item.name | uppercase}}</td>
+            <td>{{item.price | currency}}</td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>

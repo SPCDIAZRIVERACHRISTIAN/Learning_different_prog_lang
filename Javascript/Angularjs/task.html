@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="task.js"></script>
+</head>
+<body ng-app="app" ng-controller="MainController as main">
+    <h2>ToDo List</h2>
+    <hr>
+    <form>
+        <h3>New Task:</h3>
+        Name: <input type="text" ng-model="newtask.name" />
+        <input type="submit" ng-click="main.add(newtask)" value="Add Task" />
+    </form>
+    <hr />
+    <ul>
+        <li ng-repeat="task in main.tasks">
+            <input type="checkbox" ng-model="task.done" ng-click="main.delete(task)"/>
+            <span>{{task.name}}</span>
+        </li>
+    </ul>
+</body>
+</html>
+<!--
+ng-show: show element if property is true
+ng-hide: hide element if property is true
+ng-if: remove element if property is false
+wildcards like ! can be used
+ng-model: element to be used
+ng-repeat: iterates with in eg. ng-repeat="X in Y"
+ng-app: name of module
+ng-controller: name of controller
+-->

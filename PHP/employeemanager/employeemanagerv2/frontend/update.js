@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     // Fetch employee data
     $.ajax({
-        url: "update.php?id=" + employeeId,
+        url: "../backend/update.php?id=" + employeeId,
         type: "GET",
         dataType: "json",
         success: function (response) {
@@ -17,7 +17,7 @@ $(document).ready(function () {
                 $("#employee-id").val(response.id);
                 $("#name").val(response.name);
                 $("#address").val(response.address);
-                $("#salary").val(response.salary);
+                $("#salary").val(Math.trunc(response.salary));
             } else {
                 $("#error-message").text(response.errors.join(" ")).show();
             }
@@ -43,7 +43,7 @@ $(document).ready(function () {
         $("#error-message").hide();
 
         $.ajax({
-            url: "update.php",
+            url: "../backend/update.php",
             type: "POST",
             data: formData,
             dataType: "json",

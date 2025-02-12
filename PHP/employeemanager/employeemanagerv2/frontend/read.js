@@ -9,7 +9,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-        url: "read.php?id=" + employeeId,
+        url: "../backend/read.php?id=" + employeeId,
         type: "GET",
         dataType: "json",
         success: function (response) {

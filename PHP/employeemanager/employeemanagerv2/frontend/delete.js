@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $("#confirm-delete").click(function () {
         $.ajax({
-            url: "delete.php",
+            url: "../backend/delete.php",
             type: "POST",
             data: { id: employeeId },
             dataType: "json",

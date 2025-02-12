@@ -16,13 +16,13 @@ function fetchEmployees() {
                             <td>${employee.address}</td>
                             <td>$${employee.salary}</td>
                             <td>
-                                <a href="read.php?id=${employee.id}" class="mr-3" title="View Record" data-toggle="tooltip">
+                                <a href="read.html?id=${employee.id}" class="mr-3" title="View Record" data-toggle="tooltip">
                                     <span class="fa fa-eye"></span>
                                 </a>
-                                <a href="update.php?id=${employee.id}" class="mr-3" title="Update Record" data-toggle="tooltip">
+                                <a href="update.html?id=${employee.id}" class="mr-3" title="Update Record" data-toggle="tooltip">
                                     <span class="fa fa-pencil"></span>
                                 </a>
-                                <a href="delete.php?id=${employee.id}" title="Delete Record" data-toggle="tooltip">
+                                <a href="delete.html?id=${employee.id}" title="Delete Record" data-toggle="tooltip">
                                     <span class="fa fa-trash"></span>
                                 </a>
                             </td>
